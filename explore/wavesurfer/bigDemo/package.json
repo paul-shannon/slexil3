@@ -1,0 +1,14 @@
+{
+  "name": "@hellonearthis/wave-surfer-regions",
+  "main": "4dfcf6c8287bfa80@1880.js",
+  "version": "1880.0.0",
+  "homepage": "https://observablehq.com/@hellonearthis/wave-surfer-regions",
+  "author": {
+    "name": "Brett Cooper",
+    "url": "https://observablehq.com/@hellonearthis"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}

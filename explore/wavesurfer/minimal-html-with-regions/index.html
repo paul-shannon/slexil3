@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.timeline.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.minimap.js"></script>
+  </head>
+
+<body>
+<div id="waveform"></div>
+
+<div id="controls">
+<button onclick='playSound()'>PLAY indirect</button>
+<button onclick='playCurrentSelection()'>PLAY selection</button>
+<button onclick='pauseCurrentSelection()'>Pause</button>
+<button onclick='continueSound()'>Continue</button>
+
+</div>
+
+<script>
+  var wavesurfer;
+  $(document).ready(function() {
+     wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: 'violet',
+        progressColor: 'purple',
+        plugins: [
+            WaveSurfer.regions.create({
+                regionsMinLength: 0.5,
+                regions: []
+                /************
+                {id: "region_1",
+                           start: 1,
+                           end: 1.5,
+                           loop: false,
+                           color: 'hsla(400, 100%, 30%, 0.5)'
+                          },
+                          {id: "region_2",
+                           start: 5,
+                           end: 6.5,
+                           loop: true,
+                           color: 'hsla(200, 50%, 70%, 0.4)',
+                           minLength: 1,
+                           maxLength: 5,
+                          }]
+              ***********/
+            })
+            ]
+         });
+      wavesurfer.on("ready", function(){
+         wavesurfer.enableDragSelection({minLength:0.0,
+                                         maxLength:10});
+      });
+
+
+      /********
+      wavesurfer.on('region-click', function(region, e) {
+          console.log(region.start);
+          console.log(region.end);
+          e.stopPropagation();
+          region.wavesurfer.play(region.start, region.end);
+          });
+      ********/
+      
+      wavesurfer.on('region-updated', function(region){
+         var regions = region.wavesurfer.regions.list;
+         var keys = Object.keys(regions);
+         if(keys.length > 1){
+           regions[keys[0]].remove();
+           }
+         });
+
+
+         /************
+     wavesurfer = WaveSurfer.create({
+         container: document.querySelector('#waveform'),
+         waveColor: '#A8DBA8',
+         progressColor: '#3B8686',
+         backend: 'MediaElement',
+         plugins: [
+             WaveSurfer.regions.create({
+                 regionsMinLength: 2,
+                 regions: [
+                     {
+                         start: 1,
+                         end: 3,
+                         loop: false,
+                         color: 'hsla(400, 100%, 30%, 0.5)'
+                     }, {
+                         start: 5,
+                         end: 7,
+                         loop: false,
+                         color: 'hsla(200, 50%, 70%, 0.4)',
+                         minLength: 1,
+                         maxLength: 5,
+                     }
+                 ],
+                 dragSelection: {
+                     slop: 5
+                 }
+             })
+         ]
+     });
+        *********/
+
+    wavesurfer.load('a1.wav');
+    window.wavesurfer = wavesurfer;
+
+   });
+
+  function playSound(){wavesurfer.play()};
+  function playRegion1(){wavesurfer.regions.list["region_1"].play()};
+  function playRegion2(){wavesurfer.regions.list["region_2"].play()};
+  function pauseSound(){wavesurfer.pause();}
+  function continueSound(){
+     var keys = Object.keys(wavesurfer.regions.list)
+     var currentRegion = wavesurfer.regions.list[keys[0]];
+     var currentTime = wavesurfer.getCurrentTime();
+     console.log("  contineuSound, current time: " + currentTime)
+     wavesurfer.play(currentTime, currentRegion.end);
+     }
+
+  function playCurrentSelection(){
+     var keys = Object.keys(wavesurfer.regions.list)
+     if(keys.length > 0){
+        var currentRegion = wavesurfer.regions.list[keys[0]];
+        var currentTime = wavesurfer.getCurrentTime();
+        console.log("  playCurrentSelection,  current time: " + currentTime)
+        currentRegion.play()
+        }
+     } // playCurrentSelectin
+
+  function pauseCurrentSelection(){
+     var keys = Object.keys(wavesurfer.regions.list)
+     if(keys.length > 0){
+        var currentRegion = wavesurfer.regions.list[keys[0]];
+        var currentTime = wavesurfer.getCurrentTime();
+        console.log("  pauseCurrentSelection,  current time: " + currentTime)
+        wavesurfer.pause()
+        }
+     } // playCurrentSelection
+
+</script>
+
+</body>
+  

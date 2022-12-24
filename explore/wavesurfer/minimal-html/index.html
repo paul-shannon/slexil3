@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  </head>
+
+<body>
+<div id="waveform"></div>
+
+<div id="controls">
+<button id='HM0.button' onclick='wavesurfer.play()'>PLAY immediate</button>
+<button id='HM0.button' onclick='playSound()'>PLAY indirect</button>
+</div>
+
+<script>
+  var wavesurfer;
+  $(document).ready(function() {
+
+    wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: 'violet',
+        progressColor: 'purple'
+        });
+    
+    wavesurfer.load('a54.wav');
+    window.wavesurfer = wavesurfer;
+
+   });
+
+  function playSound(){
+      wavesurfer.play()
+  }
+</script>
+
+</body>
+  
