@@ -10,13 +10,22 @@
 
 <style>
   #main {margin: 50px;
+         margin-bottom: 10px;
          border: 1px black solid;
          border-radius: 10px;
          }
+  #controls{margin: 200px;
+            margin-top: 0px;
+           }
+  #playbackControls{margin-top: 5px;
+           }
+
 </style>
 <body>
 <div id="main">
 <div id="waveform"></div>
+
+</div>
 
 <div id="controls">
 <button onclick='play()'>PLAY</button>
@@ -24,12 +33,12 @@
 <button onclick='continuePlay()'>Continue</button>
 <button onclick='clearRegions()'>Clear Regions</button>
 
-<h5>Playback Speed</h5>
+<div id="playbackControls">
+<b>Playback Speed: </b>
 <button onclick='quarterSpeed()'>0.25</button>
 <button onclick='halfSpeed()'>0.50</button>
 <button onclick='threeQuarterSpeed()'>0.75</button>
 <button onclick='normalSpeed()'>1.0</button>
-
 </div>
 </div>
 
