@@ -16,14 +16,16 @@
           crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kb.js"></script>
   </head>
 
 <style>
   #waveform {margin: 10px;
+             margin-top: 60px;
              border: 1px black solid;
              border-radius: 10px;
          }
-  #controls{margin-top: 10px;}
+  #controls{margin-bottom: 10px;}
   #controls{margin-top: 30px;}
   .row{margin-bottom: 30px;}
   div.spokenLine{
@@ -32,33 +34,97 @@
   div.currentLine{
       border: 4px solid darkgray;
       border-radius: 10px;
-  }
+      }
+
+  .highlight{
+     background-color: lightgray;
+     }
+
+  div.annotationBox{
+     margin: 30px;
+     padding: 10px;
+     border: 1px solid black;
+     border-radius: 10px;
+     height: 200px;
+     }
+
 </style>
 <body>
 <div id="main" class="container">
   <div class="row" id="waveform-div">
-    <div id="controls" class="col-md-2">
+    <div id="controls" class="col-md-3">
       <button class="btn btn-outline-primary" onclick='play()' >PLAY</button>
       <button class="btn btn-outline-primary" onclick='pause()'>Pause</button>
-      <div style="margin-top: 10px;">
-      <button id="resetButton" class="btn btn-outline-primary" onclick='reset()'
-              data-bs-toggle="tooltip" data-bs-placement="top"
-              title="Remove any regions, go to start, use normal playback speed."
-              >Reset</button>
-      <div class="btn-group">
-        <button type="button" class="btn btn-outline-primary dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false"> Speed </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" onclick="halfSpeed()">Half</a></li>
-          <li><a class="dropdown-item" onclick="threeQuarterSpeed()">Three quarters</a></li>
-          <li><a class="dropdown-item" onclick="normalSpeed()">Normal</a></li>
-        </ul>
+      <div style="margin-top: 10px; margin-bottom: 10px;">
+        <button id="resetButton" class="btn btn-outline-primary" onclick='reset()'
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Remove any regions, go to start, use normal playback speed."
+                >Reset</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-primary dropdown-toggle"
+                  data-bs-toggle="dropdown" aria-expanded="false"> Speed </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" onclick="halfSpeed()">Half</a></li>
+            <li><a class="dropdown-item" onclick="threeQuarterSpeed()">Three quarters</a></li>
+            <li><a class="dropdown-item" onclick="normalSpeed()">Normal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">  
+          <h6 class="card-title">Tier Visibility</h6>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="speechTier" onclick="speechTierToggle()"
+         checked>
+  <label class="form-check-label" for="flexCheckDefault">
+    Speech
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="morphemeTier"
+         onclick="morphemeTierToggle()"
+         checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Morpheme
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="morphemeGloss"
+         onclick="morphemeGlossTierToggle()"
+         checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Morpheme Gloss
+  </label>
+</div>
+
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="morphemeTier" onclick="translationTierToggle()"
+         checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Translation
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="annotations"
+         onclick="annotationsToggle()">
+  <label class="form-check-label" for="flexCheckChecked">
+    Annotations
+  </label>
+</div>
+
+
+
+        </div>
       </div>
       </div>
 
-    </div>
-
-    <div class="col-md-10">
+    <div class="col-md-9">
       <div id="waveform"></div>
     </div>
 
@@ -67,18 +133,18 @@
   <div class="row spokenLine currentLine" id="line.001">
       <div class="line-content">
         <div class="line">
-          <div class="speech-tier">ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il.</div>
+          <div class="speech-tier">ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il</div>
         </div>
         <div class="morpheme-tier" style="grid-template-columns: 4ch 4ch 5ch 4ch 4ch 15ch 6ch 5ch 18ch ;">
-          <div class="morpheme-cell">ʔal</div>
-          <div class="morpheme-cell">kʷi</div>
-          <div class="morpheme-cell">tu=</div>
-          <div class="morpheme-cell">ʔal</div>
-          <div class="morpheme-cell">kʷi</div>
-          <div class="morpheme-cell">tu=haʔkʷ</div>
-          <div class="morpheme-cell">gʷəl</div>
-          <div class="morpheme-cell">xʷiʔ</div>
-          <div class="morpheme-cell">gʷə=tu=s–ləx̌–il</div>
+          <div class="morpheme-cell lushootseed-morpheme">ʔal</div>
+          <div class="morpheme-cell lushootseed-morpheme">kʷi</div>
+          <div class="morpheme-cell lushootseed-morpheme">tu=</div>
+          <div class="morpheme-cell lushootseed-morpheme">ʔal</div>
+          <div class="morpheme-cell lushootseed-morpheme">kʷi</div>
+          <div class="morpheme-cell lushootseed-morpheme">tu=haʔkʷ</div>
+          <div class="morpheme-cell lushootseed-morpheme">gʷəl</div>
+          <div class="morpheme-cell lushootseed-morpheme">xʷiʔ</div>
+          <div class="morpheme-cell lushootseed-morpheme">gʷə=tu=s–ləx̌–il</div>
         </div>
         <div class="morpheme-tier" style="grid-template-columns: 4ch 4ch 5ch 4ch 4ch 15ch 6ch 5ch 18ch ;">
           <div class="morpheme-cell">
@@ -131,13 +197,13 @@
           <div class="speech-tier">tiʔəʔ swatixʷtəd gʷəl tasbəsad ʔal kʷi tuhaʔkʷ</div>
         </div>
         <div class="morpheme-tier" style="grid-template-columns: 6ch 11ch 6ch 15ch 4ch 4ch 15ch ;">
-          <div class="morpheme-cell">tiʔəʔ</div>
-          <div class="morpheme-cell">swatixʷtəd</div>
-          <div class="morpheme-cell">gʷəl</div>
-          <div class="morpheme-cell">tu=?as–bəsad</div>
-          <div class="morpheme-cell">ʔal</div>
-          <div class="morpheme-cell">kʷi</div>
-          <div class="morpheme-cell">tu–haʔkʷ</div>
+          <div class="morpheme-cell lushootseed-morpheme">tiʔəʔ</div>
+          <div class="morpheme-cell lushootseed-morpheme">swatixʷtəd</div>
+          <div class="morpheme-cell lushootseed-morpheme">gʷəl</div>
+          <div class="morpheme-cell lushootseed-morpheme">tu=?as–bəsad</div>
+          <div class="morpheme-cell lushootseed-morpheme">ʔal</div>
+          <div class="morpheme-cell lushootseed-morpheme">kʷi</div>
+          <div class="morpheme-cell lushootseed-morpheme">tu–haʔkʷ</div>
         </div>
         <div class="morpheme-tier" style="grid-template-columns: 6ch 11ch 6ch 15ch 4ch 4ch 15ch ;">
           <div class="morpheme-cell">
@@ -178,6 +244,12 @@
 
 <script>
   var wavesurfer;
+  var tierVisibility = {speech: true,
+                        morphemes: true,
+                        morphemeGloss: true,
+                        translation: true,
+                        annotations: false};
+
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var divSounds = {"line.001":"a1.wav", "line.002":"a2.wav"}
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -185,10 +257,13 @@
           container: 'body',
           trigger: 'hover'})});
 
+  //-------------------------------------------------------------------------
   $(document).ready(function() {
      wavesurfer = WaveSurfer.create({
         container: '#waveform',
+        responsive: true,
         waveColor: 'gray',
+        height: "200",
         progressColor: 'purple',
         plugins: [
             WaveSurfer.regions.create({
@@ -216,23 +291,104 @@
 
     wavesurfer.load('a1.wav');
     window.wavesurfer = wavesurfer;
+      // top line in story is always initially annotated as the currentLine
+    //$("<div class='annotationBox'></div>").insertAfter(".currentLine").hide()
 
-    $("div.row").on("click", function(){
-       var rowDivs = $(".row")
-       console.log("-- rowDiv count: " + rowDivs.length)
+   $(".grammatical-term")
+        .mouseenter(function(){
+           $(this).addClass("highlight");
+           var key = this.innerHTML
+           console.log("  mouseenter: " + key)
+           if(tierVisibility["annotations"]){
+              $("div.annotationBox").html(lookup(key))
+              }
+           })
+        .mouseleave(function(){
+          $(this).removeClass("highlight");
+          });
+
+    $("div.row.spokenLine").on("click", function(){
+       console.log("--- div.row.spokenLine clicked");
+       var rowDivs = $("div.row.spokenLine")
        var rowID = $(this).attr("id");
-       if(rowID.indexOf("line.") >= 0){
-          rowDivs.each(function(index){$(this).removeClass("currentLine");})
-          $(this).addClass("currentLine")
-          console.log("row click " + rowID)
-          if(Object.keys(divSounds).indexOf(rowID) >= 0){
-             var url = "http://localhost:8001/" + divSounds[rowID]
-             wavesurfer.load(divSounds[rowID]);
-             } // if sound
-          } // if a line row div
+       rowDivs.each(function(index){$(this).removeClass("currentLine");})
+       $(this).addClass("currentLine")
+       if(Object.keys(divSounds).indexOf(rowID) >= 0){
+          var url = "http://localhost:8001/" + divSounds[rowID]
+          wavesurfer.load(divSounds[rowID]);
+          } // if sound
+       if(tierVisibility["annotations"]) {
+          $("div.annotationBox").each(function(i){$(this).remove()})
+          $("<div class='annotationBox'></div>").insertAfter($(this));
+          }
        })
 
   });  // document ready
+  //-------------------------------------------------------------------------
+
+  function speechTierToggle(){
+     tierName = 'speech'
+     tierVisibility[tierName] = !tierVisibility[tierName];
+     console.log("speech tier? " + tierVisibility[tierName]);
+     if(!tierVisibility[tierName]){
+         $(".speech-tier").hide();
+         }
+      else{
+          $(".speech-tier").show()
+          }
+     }; // speechTierToggle
+
+  function morphemeTierToggle(){
+     tierName = 'morphemes'
+     tierVisibility[tierName] = !tierVisibility[tierName];
+     console.log("morphemes tier? " + tierVisibility[tierName]);
+     if(!tierVisibility[tierName]){
+         $(".morpheme-cell.lushootseed-morpheme").hide();
+         }
+      else{
+          $(".morpheme-cell.lushootseed-morpheme").show()
+          }
+     };
+
+  function morphemeGlossTierToggle(){
+     tierName = 'morphemeGloss'
+     tierVisibility[tierName] = !tierVisibility[tierName];
+     console.log("morphemeGloss tier? " + tierVisibility[tierName]);
+     if(!tierVisibility[tierName]){
+         $(".morpheme-gloss").hide();
+         }
+      else{
+          $(".morpheme-gloss").show()
+          }
+      };
+
+  function translationTierToggle(){
+     tierName = 'translation'
+     tierVisibility[tierName] = !tierVisibility[tierName];
+     console.log("translation tier? " + tierVisibility[tierName]);
+     if(!tierVisibility[tierName]){
+         $(".freeTranslation-tier").hide();
+         }
+      else{
+          $(".freeTranslation-tier").show()
+          }
+      };
+
+  function annotationsToggle(){
+     tierName = 'annotations'
+     tierVisibility[tierName] = !tierVisibility[tierName];
+     console.log("speech tier? " + tierVisibility[tierName]);
+     if(!tierVisibility[tierName]){
+         $(".annotationBox").each(function(index){$(this).remove()})
+         }
+      else{
+         if($(".annotationBox").length == 0){ // create one
+            $("<div class='annotationBox'></div>").insertAfter(".currentLine")
+            }
+         $(".annotationBox").show();
+         }
+     }; // annotationsToggle
+
 
   function pauseSound(){console.log("pausing");
                         wavesurfer.pause();
@@ -291,6 +447,19 @@
         wavesurfer.pause()
         }
      } // playCurrentSelection
+
+  function lookup(morpheme){
+    var found = Object.keys(kb).indexOf(morpheme) >= 0;
+    console.log("---- lookup, using kb: '" + morpheme + "', found? " + found)
+    if(Object.keys(kb).indexOf(morpheme) < 0)
+       return("")
+    //var markup = converter.makeHtml(kb[morpheme]);
+      //return(markup);
+    return(kb[morpheme]);
+
+}
+//------------------------------------------------------------------------------------------------------------------------
+
 
 </script>
 
