@@ -13,7 +13,24 @@ kb = {
 //------------------------------------------------------------------------------------------------------------------------
 "sconj":
 `
-sentential conjunction
+sentential conjunction. contrast _phrasal_ conjunction:
+- *phrasal*:  Mary and Jo conferred.
+- *sentential*: Mary conferred and Jo conferred.
+`,
+
+"sbj":
+`
+**subjunctive**: a grammatical mood (that is, a way of
+speaking that allows people to express their attitude toward what they
+are saying) found in many languages. Subjunctive forms of verbs are
+typically used to express various states of unreality such as wish,
+emotion, possibility, judgement, opinion, obligation, or action that
+have not yet occurred; the precise situations in which they are used
+vary from language to language. The subjunctive is an irrealis mood
+(one that does not refer directly to what is necessarily real) – it is
+often contrasted with the indicative, which is a realis mood (used
+principally to indicate that something is a statement of fact).
+
 `,
 
 "č’ač’as":
@@ -2181,7 +2198,7 @@ first SBJ is my interpolation from the audio.
 - reminiscent of Genesis 1:3 'And God said, Let there be light; and there was light.'
 `,
 
-"ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il.":
+"ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il":
 `
 _in remote past, in remote past.of.long.duration: there was no remote.past coming.of.light_
 - topicalization <button id="refButton" onclick="ref('And-fronting');">And-fronting</button>
@@ -2436,7 +2453,9 @@ _remote_
 
 "gʷəl":
 `
-- and, but, or, then, next 
+**gʷəl**
+
+- and, but, or, then, next. LD 100.
 - as if 
 - because 
 - sentential adverb, conjunction; used especially to introduce sentences in long narratives.

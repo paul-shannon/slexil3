@@ -1,75 +1,8 @@
-m4_include(kb.m4)m4_dnl
 //------------------------------------------------------------------------------------------------------------------------
 // ʔə
 kb = {
 
 //------------------------------------------------------------------------------------------------------------------------
-"sconj":
-`
-sentential conjunction. contrast _phrasal_ conjunction:
-- *phrasal*:  Mary and Jo conferred.
-- *sentential*: Mary conferred and Jo conferred.
-`,
-
-"sbj":
-`
-**subjunctive**: a grammatical mood (that is, a way of
-speaking that allows people to express their attitude toward what they
-are saying) found in many languages. Subjunctive forms of verbs are
-typically used to express various states of unreality such as wish,
-emotion, possibility, judgement, opinion, obligation, or action that
-have not yet occurred; the precise situations in which they are used
-vary from language to language. The subjunctive is an irrealis mood
-(one that does not refer directly to what is necessarily real) – it is
-often contrasted with the indicative, which is a realis mood (used
-principally to indicate that something is a statement of fact).
-
-`,
-
-"č’ač’as":
-`
-child, young, youngster (up to 10 or 12 years old).  LD 68
-- contrast
-    - _bəda_: offspring
-    - _luƛ'_: old
-    - _ləgʷəb_: youth, young man
-- as predicate: _č’ač’as čəd x̌ʷul'ab ʔə dəgʷi_: I am as young as you.
-`,
-
-"ʔu–ʔəƛ̌’–tx̌ʷ":
-`_brought_: LINGREF(PERF,perfective) come LINGREF(ECS, ECS).
-- _əƛ̌’_: come.  LD 12
-- _əƛ̌-’tx̌ʷ_: cause to come, bring someone or something.
-- _əƛ̌-’tx̌ʷ tə x̌payʔ_ Bring that cedar!
-
-`,
-
-"ʔuʔəƛ̌’tx̌ʷ ti č’ač’as":
-   `
-   _(someone) brought the boy_.
-   `,
-
-"ʔu–ʔux̌ʷ–tx̌ʷ": 
-`_took_: LINGREF(PERF,perfective) go LINGREF(ECS, ECS).
-`,
-
-"ʔu–ʔux̌ʷ": 
-`_went, going, will go_: LINGREF(PERF,perfective) go.
-`,
-
-
-"ʔuʔux̌ʷtx̌ʷ ti č’ač’as":
-   `
-   _(someone) took this youngster (somewhere)_
-   `,
-
-"ʔuʔux̌ʷ ti č’ač’as": `_going this youngster_
-[<sub>PRED</sub>ʔuʔux̌ʷ][<sub>DCOMP</sub>[<sub>DEM</sub>ti <sub>AGENT</sub>č’ač’as]]
-
-Marked for perfective aspect, unmarked for LINGREF(TENSE,tense) _ʔuʔux̌ʷ_ could mean _went_, _going_, even _will go_. (LR1.51)
-Hess translates _č’ač’as_ as boy in lesson 1 (LR1.3).  Thus unmarked tense and unmarked gender appear to default
-to past and male.
-`,
     
 "(113) gʷəl qaʷ’qs kʷi dᶻixʷ tukʷədad tiʔəʔ sləx̌il":
 `
@@ -146,7 +79,7 @@ _will steal (it)_
 30-31: _lə=ʔux̌ʷ–c_
 `,    
 
-"(28)-(29) ɬudxʷʔiʷədəxʷ əlgʷəʔ gʷatəxʷ ʔə dibəɬ kʷi ɬuʔux̌ʷtxʷ kʷi sləx̌il":
+"(28)-(29) ɬudxʷʔiwədəxʷ əlgʷəʔ gʷatəxʷ ʔə dibəɬ kʷi ɬuʔux̌ʷtxʷ kʷi sləx̌il":
 `
 _decide now they, who of us will go after the light?_
 <audio id="line28-29-halfSpeed"><source src="audio/line28-29-halfSpeed.wav"/></audio><button onclick="playSample('line28-29-halfSpeed')">half-speed</button>
@@ -193,12 +126,13 @@ _who now_
 "ɬu=dxʷ–ʔiʷəd=əxʷ":
 `
 _tried to decide_
-<audio id="theyWillDecideNow"><source src="audio/theyWillDecideNow.wav"/></audio><button onclick="playSample('theyWillDecideNow')">half-speed</button>
-- LU
+- _ɬu_: anticipated, expected or possible event  LD 147
+     * IRR: irrealis moods, indicating that a certain situation or action is not known to have happened at the moment 
+       the speaker is talking. This contrasts with the realis moods (which in most languages is only the indicative).
 - _dxʷ<sup>2</sup>_ : lack of control, accidentally, accomplish with difficulty.  LD 86
-     - DC: diminished control
-- _ʔiʷ_: decide.  LD 19.
-- _ʔdxʷ√iʷədəxʷəlgʷəʔ_: they tried to decide.  LD 19, this line as example.
+    - DC: diminished control
+- _ʔiw_: decide.  LD 19.
+- _ʔdxʷ√iwədəxʷəlgʷəʔ_: they tried to decide.  LD 19, this line as example.
 - _=əxʷ_, _axʷ_ : now, at the particular time. LD 30
 `,
 
@@ -224,7 +158,7 @@ _they, theirs_
 "tu=dəxʷ=ʔəs–hay–dxʷ=s=əxʷ":
 `
 _past manner state of knowing with.difficulty they now_
-- TUCl
+- _tu=_: past LD 228
 - _dəxʷ<sup>2</sup>_ : ADNM (adjunctive nominalizer)  LD 81
     - reason for, place where, time when
     - inflectional prefix marking a subordinate predicate in construction with a fronted adjunct
@@ -245,11 +179,11 @@ _past manner state of knowing with.difficulty they now_
 "diɬ":
 `
 _that_
-- the one who, the thing that, that which, the aforementioned. LD 83 LINGREF(anaphor, anaphor)
+- the one who, the thing that, that which, the aforementioned. anaphor. LD 83
 - pronoun; often used as a one-word predicate followed by a subordinate clause.
   One would expect a demonstrative to introduce a following clause when it serves
   as the complement of the _diɬ_ predicate.  However, all speakers omit this
-  demonstrative sometimes, and some usually do.
+  demonstrative soemtines, and some usually do.
 - compare _cədiɬ_: the particular one, he, she, that fellow, 3p sg emphatic pronoun. LD 44.
 `,    
 
@@ -258,7 +192,6 @@ _that_
 _that manner-of-knowing they. getting.nearer we_
 the cyles of dark and light (described in the previous) line is how they knew: we are getting near.
 - <audio id="weAreGettingNear"><source src="audio/weAreGettingNear-24-25.wav"/></audio><button onclick="playSample('weAreGettingNear')">half-speed</button>
-- <audio id="howTheyKnew"><source src="audio/howTheyKnew.wav"/></audio><button onclick="playSample('howTheyKnew')">how they knew</button>
 
 `,
 
@@ -268,26 +201,6 @@ _ongoing for a long time, that ongoing growing light and ongoing growing dark_
 
 - <audio id="line25-halfSpeed"><source src="audio/line25-halfSpeed.wav"/></audio><button onclick="playSample('line25-halfSpeed')">half-speed</button>
 
-From David Beck (email 20 nov 2021)
-
-Literally, it would be glossed as “its habitual getting light again
-[was] for a long time, and it would again get dark”.
-
-The sentence consists of two clauses joined by gʷəl ‘and’. The first
-one has no verb and the predicate of the sentence is an adverb hagʷ
-‘long time’ and the subject is a nominalized form of our favourite
-word, sləx̌il.
-
-sləx̌il is what we call in the business an impersonal [avalent] verb which
-doesn’t have any real Agent or Actor to be the subject, so the subject
-of any clause with sləx̌il is like the English “it” in “it is
-raining”—an “empty” (i.e., meaningless) third-person. When you
-nominalize a verb in Lushootseed, you need to express what would have
-been the subject as a possessor, so here the =s is just a grammatical
-expression of that empty third person. The subject of the second
-sentence is also that, but since it is not nominalized, we have a
-finite clause with a Ø (elided) pronoun.
-
 `,
     
 "ƛ’u=bə=lə=bəsad":
@@ -295,8 +208,7 @@ finite clause with a Ø (elided) pronoun.
 _ongoing repeating coming of darkness_
 
 
-- _ƛ’u_<sup>1</sup>: habitual action or state; generally, usually. LINGREF(HABITUAL, HAB).   LD 155. 
-
+- _ƛ’u_<sup>1</sup>: HAB (habitual action or state; generally, usually). LD 155.
 - _bə_: inflectional additive prefix. abbreviated _ADD_.  LD 34  
      - again, anew (of actions or states)
      - additional, another (of nouns)
@@ -325,7 +237,7 @@ _ _s=ləx̌-il_: grow light, day.
 "ƛ’u=hagʷ=əxʷ":
 `
 _ongoing for a long time_
-- _ƛ’u_<sup>1</sup>: habitual action or state; generally, usually. LINGREF(HABITUAL, HAB). LD 155.
+- _ƛ’u_<sup>1</sup>: HAB (habitual action or state; generally, usually). LD 155.
 -  _haʔkʷ_: variant _hagʷ_. LD 104
      -  ago, for a long time
      - _hagʷəxʷ_:  it has been a long time, it was for a long time
@@ -337,15 +249,6 @@ _ongoing for a long time_
 "(22) x̌ʷul’əxʷ əlgʷəʔ tuləč’itil dxʷʔal tiʔəʔ dəxʷʔa ʔə kʷi sləx̌il ləx̌iličəxʷ əlgʷəʔ":
 `
 just now they came near toward this place of daylight covered.in.light they
-near now, getting close to this place of daylight:  light now covered them.
-
-- alternate parse (pshannon), in three phrases:
-     - Near now they
-     - Getting near towards this place (of) daylight
-     - got covered in light they
-     - contraindications:  first three words seem to be a single phonological phrase
-     - construing first two words as <i>near they</i> followed by <i>getting close to this place of daylight</i>
-       is consistent with LINGREF(ADDITIVE_vs_SUBORDINATING_STYLE, additive) style.
 - <audio id="line22-halfSpeed"><source src="audio/line22-halfSpeed.wav"/></audio><button onclick="playSample('line22-halfSpeed')">half-speed</button>
 - <audio id="line22-part1-halfSpeed"><source src="audio/line22-part1-halfSpeed.wav"/></audio><button onclick="playSample('line22-part1-halfSpeed')">part 1</button>
 - <audio id="line22-part2-halfSpeed"><source src="audio/line22-part2-halfSpeed.wav"/></audio><button onclick="playSample('line22-part2-halfSpeed')">part 2</button>
@@ -374,14 +277,14 @@ _place_
 _became covered in light_
 - Beck and Hess have:
     -  _ƛ’u=ləx̌–il•ič=əxʷ_ 
-    - (HAB=light–INCH•covering=now).   LINGREF(INCH, INCH)
+    - (HAB=light–INCH•covering=now).
     -  I don't hear the _ƛ’u_.
     - I DO hear _lax̌_ in the opening syllable.
 - _ləx̌-il_: grow light, day.
      - _ləx̌_: 
          - light (verb) as in "light a fire", set to burning.  LD 137
          - compare _hud(u)_: burn, fire.  LD 111
-     - _-il_:  reach or achieve a state or position; becoming. derivational suffix; LD 116  LINGREF(DERIVATIONAL_SUFFIX, derivational suffix)
+     - _-il_:  reach or achieve a state or position; becoming. derivational suffix; LD 116
 - speculative alternative construction:
      - _ləx̌ʷ_: LD 137, see _x̌ac_ 
      - _x̌ac_: LD 256, cover (something)
@@ -400,13 +303,13 @@ _became covered in light_
 `
 _that land upriver_
 - _dxʷ_: CNTRPT, centripetal
-    - A centripetal is an expression of place LINGREF(deixis, deixis) which has a component of meaning indicating movement toward a
+    - A centripetal is an expression of place deixis which has a component of meaning indicating movement toward a
       deictic center.
     - A deictic expression is a word or phrase (such as this, that, these, those, now, then, here) that
       points to the time, place, or situation in which a speaker is speaking.
     - Words are deictic if their semantic meaning is fixed but their denoted meaning varies depending on
       time and/or place. Words or phrases that require contextual information to convey any meaning—for
-      example, English pronouns—are deictic. Deixis is closely related to LINGREF(anaphor, anaphora).
+      example, English pronouns—are deictic. Deixis is closely related to anaphora.
     - When an expression refers to another linguistic expression or a piece of discourse, it is discourse deictic.
       When that expression refers to the same item as a prior linguistic expression, it is anaphoric.
 - _q'xʷ_ : located upstream; up.  also _q'ixʷ_, _q'ayxʷ_.  LD 187
@@ -414,35 +317,37 @@ _that land upriver_
 
 `,
     
-"(21) tusəgʷaʔxʷ ʔux̌ʷ tux̌ʷ xʷiʔ uʔxʷ kʷi sləx̌il tux̌ʷ kʷi q’xʷul’gʷədxʷ":
+"(21) tusəgʷaʔxʷ ʔux̌ʷ tux̌ʷ xʷiʔ uʔxʷ kʷi sləx̌il tux̌ʷ xʷiʔ uʔxʷ q’xʷul’gʷədxʷ":
 `
-walking went but not yet, that daylight went that upstream land.
-- <audio id="line21-halfSpeed"><source src="audio/line21-halfSpeed.wav"/></audio><button onclick="playSample('line21-halfSpeed')">half-speed</button>
-- <audio id="tu-gwawk-oak-halfSpeed"><source src="audio/tu-gwawk-oak-halfSpeed.wav"/></audio><button onclick="playSample('tu-gwawk-oak-halfSpeed')">from previous line</button>
-- <audio id="line21-tu-gwak-oak-doak-weech"><source src="audio/line21-tu-gwak-oak-doak-weech.wav"/></audio><button onclick="playSample('line21-tu-gwak-oak-doak-weech')">first words</button>
 - What I hear:
-    - tu swaw go goke weech kwi slexil goke kwi qulgwəd
+    - tu sə waw go goke weech kwi slexil goke weech qulgwəd
     - tu gwawk oak goke weech kwi slexil goke weech qulgwəd
     - past soon went, but not yet, remote daylight, but not yet, upstream land.
-- Hilbert and Hess 32-33, Beck and Hess 21:  They sought for daylight in the land upstream
-    - _tu=gʷəč’ədaxʷ əlgʷəʔ kʷi sləx̌il dxʷʔal kʷi dxʷq’xʷul’gʷədxʷ_
-    - past=search-ICS=now PL REM daylight CNTRPT-at REM CNTRPT-upstream•land
-    - ICS: internal causative, transitive suffix
+- _tugʷəč’ədaxʷ &nbsp; tux̌ʷ xʷiʔ uʔxʷ &nbsp;  kʷi &nbsp; sləx̌il &nbsp; tux̌ʷ xʷiʔ uʔxʷ &nbsp; q’xʷul’gʷədxʷ_
 - which might translate as:
   _they searched for, but-not-yet, that remote daylight, but-not-yet, in that remote upriver country_
-- blending HHB with what I hear, first sounds may be _tugʷəč’ədaxʷ ʔux̌ʷ_: searched went
 - *č*: "c-wedge" like English ch as in church[voiceless palatal affricative] LD xii
   [voiceless ejective palatal affricate] LD xii
 - *č'*: "glottalized c-wedge" is a combination of glottal stop and č, released with the same popping sound as c'
   [voiceless ejective palatal affricate] LD xii
+- <audio id="line21-halfSpeed"><source src="audio/line21-halfSpeed.wav"/></audio><button onclick="playSample('line21-halfSpeed')">half-speed</button>
+- <audio id="tu-gwawk-oak-halfSpeed"><source src="audio/tu-gwawk-oak-halfSpeed.wav"/></audio><button onclick="playSample('tu-gwawk-oak-halfSpeed')">from previous line</button>
+- <audio id="line21-tu-gwak-oak-doak-weech"><source src="audio/line21-tu-gwak-oak-doak-weech.wav"/></audio><button onclick="playSample('line21-tu-gwak-oak-doak-weech')">first words</button>
 
 `,
 
 "(20) tu=gʷaʔxʷ ʔux̌ʷ tiʔəʔ diʔəʔ tuʔuluɬəxʷ tiʔəʔ diʔəʔ bibščəb ʔi tiʔəʔ diʔəʔ ʔi tiʔəʔ qaw'qs":
 `
-walked went this here, water.travelled this here mink, and this here, and this raven.
-
+They (soon went)(walk go), this here, traveled by water this here mink, and this here, and this raven.
 - <audio id="tu-gwawk-oak-halfSpeed"><source src="audio/tu-gwawk-oak-halfSpeed.wav"/></audio><button onclick="playSample('tu-gwawk-oak-halfSpeed')">first words 1/2 speed</button>
+- The second syllable ("gwawk")might be
+    - _gʷaʔxʷ_: eventually, soon, predicate adverb, LD 95
+    - _gʷəč'_ : look for, search.  LD 98.  _gʷəč'-əd_: look for someone or something [patient oriented stem]
+    - _gʷax̌ʷ_ : stroll, go for a walk, LD 97, the agent is always plural.  
+      many "walk" references, one Martha Lamont reference: _ɬələləgʷax̌ʷ_ when they travel.
+- The third syllable ("oakʷ") might be
+    - _ʔux̌ʷ_: go, be, exist.  LD 22
+    - _uʔxʷ_ : still, yet. predicate particle. LD 243
 - Beck &amp; Hess omit these first three sounds:
   _tuʔuluɬəxʷ tiʔəʔ diʔəʔ bibščəb ʔi tiʔəʔ qaw’qs_
   Now Little Mink and Raven set out by canoe.
@@ -509,7 +414,7 @@ _they walked_
 `
 _(anticipated|imagined|wished|possible) (place-where|time-when|reason-for) their becoming light(footed)_
 
-- GWE
+- _gʷə=_: if, maybe, might; inflectional subjunctive prefix expressing doubt, events contrary to fact. LD 95.
 - _dəxʷ<sup>2</sup>_ : ADNM (adjunctive nominalizer)  LD 81
     - reason for, place where, time when
     - inflectional prefix marking a subordinate predicate in construction with a fronted adjunct
@@ -564,16 +469,16 @@ All three employ nominalizing proclitics, _s-_ or _dəxʷ_, creating gerund-like
 
 `,
 
-"siʔəxʷ čəɬ ƛ’ubəxʷ dxʷʔal kʷi gʷəsʔuʔux̌ʷc čəɬ kʷi sləx̌il ʔal kʷi dəxʷʔacəc":
+"siʔəxʷ čəɬ ƛ’ubəxʷ dxʷʔal kʷi gʷəsuʔux̌ʷc čəɬ kʷi sləx̌il ʔal kʷi dəxʷʔacəc":
 `
-- _there.now we good.now towards going.after we sunlight at remote location_
+- _there.now we good.now towards going.after we sunlight remote location_
 - _we're there now, good now, to go after sunlight at its remote location_
 `,
 
 
 "dəxʷ=ʔacəc":
 `
-_location, place__
+_location_
 - _dəxʷ<sup>2</sup>_ : ADNM (adjunctive nominalizer)  LD 81
     - reason for, place where, time when
     - inflectional prefix marking a subordinate predicate in construction with a fronted adjunct
@@ -606,7 +511,7 @@ _go_
 `
 _conjectured going after_
 
-- GWE
+- _gʷə=_: if, maybe, might; inflectional subjunctive prefix expressing doubt, events contrary to fact. LD 95.
 - _s=_: nominalizer
 - _ʔu<sup>3</sup>: PRF (perfective aspect) LD 19
     - an action is viewed as a whole, in its entirety
@@ -722,12 +627,11 @@ _oh!_
 
 "gʷə=čal(a)–dxʷ–buɬʔ":
 `
-_catch us (unlikely chase.transitive us)_
+_catch us_
 
-- GWE
+- _gʷə=_: if, maybe, might; inflectional subjunctive prefix expressing doubt, events contrary to fact. LD 95.
 - _čal(a)_:   chase, follow, pursue, overtake; catch. LD 60
-- _čal-dxʷ_: transitive, catch up with someone LD 60
-    -  DC: diminished control, lack of control, accidentally, accomplish with difficulty
+- _čal-dxʷ_: transitive, catch up with someone LD 60 
 - _buɬ_: LD 42.  see _uɬ_, _-š<sup>3</sup>_
      - _uɬ<sup>3</sup>_: us, first person plural patient suffix.  LD 244. see _-š<sup>3</sup>_ 
      - _-š<sup>3</sup>_: me(as receiver of action, patient), person patient suffixes, of which there are many forms.  LD 207
@@ -736,14 +640,11 @@ _catch us (unlikely chase.transitive us)_
 
 "tu=dxʷ–cut–əb":
 `
-_they thought (past inside want to say)_
-- <audio id="gwel-tu-dex-cut-ebuh-duh-oh"><source src="audio/gwel-tu-dex-cut-ebuh-duh-oh.wav"/></audio><button onclick="playSample('gwel-tu-dex-cut-ebuh-duh-oh')">half-speed</button>
-- two previously untranscribed syllables between this work and the next. My current guess:
-    - _gʷəl tu=dxʷ–cut–əb **ʔə də** ʔuˑ"_:
+_they thought_
 - _tu=_: past
 - _dxʷ√cut-əb_: think, literally "wish to say"  LD 48, column 2
 - _dxʷ<sup>1</sup>_ : CTD (contained) LD 85
-    - permeate, throughout, filled with, covered with
+    - permeate, throughtout, filled with, covered with
     - derivational prefix which marks stems as serving to contain, to hold within
     - also designates a proclivity: what one has "inside"
     - also carrying this prefix are a number of stems referring to matters of the mind, the _x̌əč_. 
@@ -778,9 +679,6 @@ _tell us a story_
 "gʷəl tu (həbuʔ)  ʔa gʷəl tudxʷcutəb ʔuˑ xʷiʔəxʷ kʷi ʔahəxʷ gʷəčaldubuɬ":
 `
 _and then (tell it!) then they thought, oh! nothing now can catch us_
-<h5> Beck and Hess</h5>
-  <img src='images/beck-and-hess-daylight-17-18.png' width=800></img>
-
 `,
 
 "ʔaləxʷ kʷi čəɬ, ʔaləxʷ kʷi čəɬ tubuus, tubuusalgʷiɬil kʷi tuasx̌əʷk’ʷ ƛ’əlayʔ":
@@ -803,13 +701,13 @@ _then made ready four.canoes, overturned shovel.nose.canoe, and they jumped over
 `
 _at that time, then_
 
-- GQAL
-- EXW
+- _ʔal_: preposition of location (here, in time). LD 4
+- _əxʷ_, _axʷ_ : now, at the particular time. LD 30
 `,
 
 "čəɬ":
 `
-- _čəɬ <sup>1</sup>_ : we, us; our. LD 63 LINGREF(CED.WORDS, čəd words)
+- _čəɬ <sup>1</sup>_ : we, us; our. LD 63
 - _čəɬ <sup>2</sup>_ :
     - make for one's use; go after; hunt for one's own use [Skagit]  LD 63
     - one of a small class of roots for which the expected direct complement patient lacks
@@ -874,15 +772,50 @@ _four canoes_
 
 "tu=buus•al•gʷiɬ–il":
 `
-_then four canoes achieved_
+_then four canoes_
 
-- TUCl
+- _tu=_: past
+- _=_: clitic boundary
 - _buus_: four.  LD 42
 - •: lexical suffix boundary (Beck & Hess abbreviations, p55)
 - _•a•_: lexical linking element  LD 27
 - LD 103 implies _algʷiɬ_ means "side of canoe" or "side-by-side canoes"
 - _gʷiɬ_: canoe, waterway; curved side; narrow passageway; lexical suffix. LD 103. see _=ucid_ LD 243.
-- LEXICAL_SUFFIX
+- _-il<sup>1</sup>_: reach or achieve a state or position; becoming; begin. LD 116
+`,
+
+
+"tu=buus•al•gʷiɬ–il":
+`
+_then four canoes_
+
+- _tu=_: past
+- _=_: clitic boundary
+- _buus_: four.  LD 42
+- •: lexical suffix boundary (Beck & Hess abbreviations, p55)
+- _•a•_: lexical linking element  LD 27
+- LD 103 implies _algʷiɬ_ means "side of canoe" or "side-by-side canoes"
+- _gʷiɬ_: canoe, waterway; curved side; narrow passageway; lexical suffix. LD 103. see _=ucid_ LD 243.
+  -  Lexical suffixes
+   - A  group of suffixes found in Salish, Chemakuan, and Wakashan which have semantic content
+     analogous to specific nouns, but lack phonological similarity to them.
+   - In this sense, they are unlike what is usually perceived as derivational affixes, which
+     more often have little concrete meaning, rather serving to identify lexical classes.
+   - Lexical suffixes have gone by several names: Sapir described them, rather than naming them, and
+     called them ''verbal affixes that refer to nouns" (1911:251/1989 [1990]:28);
+   - Reichard called them "nominal suffixes" (1938:601),
+   - Vogt used the term "field-suffixes" (1940:58), and Kuipers divided them into "somatic suffixes"
+     (1967:120) and "non-somatic suffixes" (1967:125).
+   - The usage "1exical suffixes" was first used by Kinkade (1963:352), adopted from Vogt, who used this
+     term, rather, for "a group of suffixes which modify the verb, by changing its
+     syntactical functions or by adding various shades of meaning, as iteration,
+     reciprocity, reflexivity etc."  (1940:56).
+   - Kinkade made the change because of the semantic similarity between these suffixes and usual lexical
+     items (i.e. nouns). The term is now in  general use in discussing this class of affix in Salish,
+     Chemakuan, and Wakashan studies.
+   - A small number of prefixes found in some Salishan languages are often referred to as
+     "lexical prefixes", probably developed by analogy with lexical suffixes; I will not deal with
+     these prefixes here.
 - _-il<sup>1</sup>_: reach or achieve a state or position; becoming; begin. LD 116
 `,
 
@@ -990,8 +923,6 @@ _running_
 
 _past.ago readied.self they in.order.to remote  wishedFor.nominal.swift.becoming developing.canoe_
 
-More concisely: _In the long go they prepared themselves to attain their fast canoe._
-
 My interpretation (reconstruction) of the end of this line impertinently contradicts both published
 versions, in which the final word is said to be _lətaliwil_: progressive running.   I offer two
 amateur bits of evidence:
@@ -1059,8 +990,7 @@ _their habitual jumping over bulky object_
 - _saxʷəb_: jump, leap, scamper off, run. contrast with _təlawil_ run for a sustained period.  LD 200.
 - _abac_: body, bulky object, enclosed area. lexical suffix.
 - _–t-_ :  ICS, internal causative. variant of transitive suffix _-d_ before -əb and other suffixes. LD 215
-    - from <a href="https://pdfs.semanticscholar.org/5aab/4a8f15ba0aaae74729454b75371b8034c883.pdf" target=_blank> 
-      David Beck's Transitivity and Causation in Lushootseed Morphology</a>:
+    - from <a href="https://pdfs.semanticscholar.org/5aab/4a8f15ba0aaae74729454b75371b8034c883.pdf" target=_blank> David Beck's Transitivity and Causation in Lushootseed Morphology</a>:
       because the event-internal causative conforms so closely to the transitive archetype, -t has
       been referred to as a ‘transitivizer’; however, other suffixes affect valency in the same way
 - _=s_: 3PO. third person possesive patient person suffix.  LD 199.
@@ -1107,7 +1037,7 @@ _to become swift; progressive-came.to.be-two-canoes overturned their shovel-nose
 `
 _their hoped for ongoing big-object-jumping_ 
 - <audio id="gwesesaxwebabac"><source src="audio/gwesesaxwebabac.wav"/></audio><button onclick="playSample('gwesesaxwebabac')">play</button>
-- GWE
+- _gʷə=_: if, maybe, might; inflectional subjunctive prefix expressing doubt, events contrary to fact. LD 95.
 - _s=_: nominalizer
 - _lə_: action is ongoing, non-circumscribed, continuing, developing. LD 134. PROG (progressive)
 - _saxʷəb_: jump, leap, scamper off, run. contrast with _təlawil_ run for a sustained period.  LD 200.
@@ -1261,28 +1191,9 @@ _raven_
   in his attempt to get food.
 `,
 
-"‘They prepared themselves in order to be swift as they run.’":
-`
-<a href='englishAnalysis/line7.html' target="_blank">analysis</a>
-          
-`,
-
-
 "tuhuyucut həlgʷəʔ dxʷʔal sxʷəxʷaʔxʷəʔs gʷəsutəlawils əlgʷəʔ":
 `
 got.self.ready they towards.the.goal.of their.light.footedness their.hoped.for.future.running they
-- <audio id="line7-preparedToRun-halfSpeed"><source src="audio/line7-preparedToRun-halfSpeed.wav"/></audio><button onclick="playSample('line7-preparedToRun-halfSpeed')">half-speed</button>
-
-clause structure of the english translation:
-They prepared themselves in order to be swift as they run.
-  - subject
-  - predicate
-  - reflexive object
-  - adverbial phrase: in order to be swift as they run
-     - in order to: coordinating conjunction
-     - be swift as they run: adverbial clause
-     - question: how to break down 'be swift' 'as they run'?
-     - https://letsdiagram.com/diagram/app/#home
 `,
 
 "tu=huyu–t–sut":
@@ -1299,9 +1210,7 @@ _got self ready_
      -  LD 112
      - _-cut<sup>3</sup>_ :
           - myself, yourself, himself, herself, itself, themselves
-          - reflexive suffix, from _-t-sut_
-          - reflexive: has the same semantic agent and patient (typically represented syntactically by the 
-            subject and the direct object)
+          - reflexive suffixe, from _-t-sut_
           - LD 49
 
 `,
@@ -1322,7 +1231,7 @@ _they, theirs_
 - they, them, their, theirs
 - 3p pl predicate particle
 - makes explicit that a thrid person referent is plural whether as agent, patient or possessor
-- always optional; pragmatic considerations determine its use
+- always option; pragmatic considerations determine its use
 - pronounced _həlgʷəʔ_ after a vowel or pause
 `,
 
@@ -1331,8 +1240,15 @@ _they, theirs_
 _in order to, towards the goal of, towards_
 - _dxʷ√ʔal_: toward, until. LD 86, in entry for _dxʷ-_, toward, to.
 - _dxʷ_: CNTRPT, centripetal
-    - an expression of place LINGREF(deixis, deixis) meaning indicating movement toward a
+    - A centripetal is an expression of place deixis which has a component of meaning indicating movement toward a
       deictic center.
+    - A deictic expression is a word or phrase (such as this, that, these, those, now, then, here) that
+      points to the time, place, or situation in which a speaker is speaking.
+    - Words are deictic if their semantic meaning is fixed but their denoted meaning varies depending on
+      time and/or place. Words or phrases that require contextual information to convey any meaning—for
+      example, English pronouns—are deictic. Deixis is closely related to anaphora.
+    - When an expression refers to another linguistic expression or a piece of discourse, it is discourse deictic.
+      When that expression refers to the same item as a prior linguistic expression, it is anaphoric.
 - _ʔal_: at
 `,
 
@@ -1343,13 +1259,6 @@ _attaining swiftness_
 - _xʷəxʷaʔxʷəʔ_ : light (weight), light(footed, swift) LD 250
 - contrast _x̌əb_ heavy LD 260
 - _-il<sup>1</sup>_: reach or achieve a state or position; becoming; begin. LD 116
-    - INCH: inchoative aspect, refers to the beginning of a state.
-      not be confused with the prospective, which denotes actions that are about to start. 
-    - Aspect is a grammatical category that expresses how an action, event, or state, extends over time. 
-      Perfective aspect is used in referring to an event conceived as bounded and unitary, 
-      without reference to any flow of time during ("I helped him"). Imperfective describes a situation 
-      with interior composition.
-
 - _=s_ : 3PO, third person possesive patient person suffix  LD 199
 
 `,
@@ -1365,9 +1274,18 @@ _their swiftness_
 
 "gʷə=s=ʔu–təlawil=s":
 `
-_their hoped-for sustained running_
-
-- GWE
+_their hoped-for future running_
+- _gʷə_: SBJ (subjunctive) LD 95
+    - if, maybe, might; inflectional subjunctive prefix expressing doubt, events contrary to fact
+    - The subjunctive is a grammatical mood (that is, a way of speaking that allows people to
+      express their attitude toward what they are saying) found in many languages. Subjunctive forms
+      of verbs are typically used to express various states of unreality such as wish, emotion,
+      possibility, judgement, opinion, obligation, or action that have not yet occurred; the precise
+      situations in which they are used vary from language to language. The subjunctive is an
+      irrealis mood (one that does not refer directly to what is necessarily real) – it is often
+      contrasted with the indicative, which is a realis mood (used principally to indicate that
+      something is a statement of fact).
+    - appears on any lexical category functioning as predicate or complement
 - _s=_: nominalizer
 - _ʔu<sup>3</sup>: PRF (perfective aspect) LD 19
     - an action is viewed as a whole, in its entirety
@@ -1380,6 +1298,7 @@ _their hoped-for sustained running_
     - run, especially for a long period
     - contrast with _saxʷəb_: run with a short burt of energy
     - transitive _təlaw-il-txʷ_: operate a machine, exercise a horse
+    - _-il<sup>1</sup>_: reach or achieve a state or position; becoming; begin. LD 116
 - _=s<sup>2</sup>_: 3PO, third person possessive suffix  LD 199
 `,
 
@@ -1394,7 +1313,11 @@ _now (they) washed themselves_
 "tu=c’agʷa–t–sut=əxʷ":
 `
 _now washed themselves_
-- TUCl
+- _tu=_ :
+     - past time, especially the remote past
+     - inflectional past prefix, appearing on any lexical category functioning as predicate or complement
+     - also _tə-_
+     - LD 228
 - _c'agʷa_ :
      - variant of _c'ʔakʷ_ : wash
      - _c'agʷa-d_ : transitive, washed something
@@ -1409,7 +1332,7 @@ _now washed themselves_
      - (I'm not sure this makes sense: analysis of the bobcat sentence more parsimonious)
 - _-cut<sup>3</sup>_ :
      - myself, yourself, himself, herself, itself, themselves
-     - reflexive suffix, from _-t-sut_
+     - reflexive suffixe, from _-t-sut_
      - LD 49
 - _əxʷ_, _axʷ_ : now, at the particular time. LD 30
      - aspectual clitic contrasting an action or state with a former condition
@@ -1489,13 +1412,18 @@ _daylight_
 "gʷə=dəxʷ=kʷəd–dxʷ":
 `
 _conjectured hard-to-do taking_
-- GWE
+- _gʷə_:
+    - if, maybe, might
+    - inflectional subjunctive prefix expressing doubt, events contrary to fact
+    - appears on any lexical category functioning as predicate or complement
+    - _gʷə_ before consonants
+    - LD 95
 - _dəxʷ<sup>1</sup>_ : predicate adverb, gloss unknown  LD 80
 - _dəxʷ<sup>2</sup>_ : ADNM (adjunctive nominalizer)  LD 81
     - reason for, place where, time when
     - inflectional prefix marking a subordinate predicate in construction with a fronted adjunct
     - creates nominal expressions with the same distribution as relative and headless relative clauses. LG 7.4.2.2
-      used primarily for the nominalization of LINGREF(adjunct, adjunct) and circumstantial expressions, particularly (but not exclusively), 
+      used primarily for the nominalization of adjunct and circumstantial expressions, particularly (but not exclusively), 
       instruments, locations, motivations, and manners, and will be referred to here as an adjunctive nominalizer.
 - _kʷəd(a)_: take, get, hold, grasp; carry in the hand. LD 123
 - _dxʷ_ : lack of control, accidentally, accomplish with difficulty
@@ -1503,10 +1431,9 @@ _conjectured hard-to-do taking_
 
 `,
 
-"gʷʔəs–čal=əxʷ":
+"ʔəs–čal=əxʷ":
 `
 _how now?_
-- GWE
 - _ʔəs_: condition or state exists [verbal inflectional prefix of stative aspect]. LD 13
 - _čal_: how? in what condition or state?  LD 60
     - _ʔəs–čal=əxʷ kʷi ɬushuys_: how will he manage?
@@ -1532,7 +1459,7 @@ _how now?_
 "tu=dxʷ–had–had=əxʷ":
 `
 _embarked upon discussing_
-- TUCl
+- _tu_: remote past 
 - _dxʷ<sup>1</sup>_ : CTD (contained) LD 85
     - permeate, throughtout, filled with, covered with
     - derivational prefix which marks stems as serving to contain, to hold within
@@ -1540,7 +1467,6 @@ _embarked upon discussing_
     - also carrying this prefix are a number of stems referring to matters of the mind, the _x̌əč_. 
 - ʔəhad:
     - _dxʷ√ʔəhad_ talk LD 11
-    - LINGREF(reduplication, reduplication)
     - _dxʷ√ʔəhad+ad_ : discuss (this line is the example)  _red3_
     - the root apparently never appears without the prefix
 - _əxʷ_, _axʷ_ : now, at the particular time. LD 30
@@ -1554,8 +1480,13 @@ _embarked upon discussing_
 
 "tiʔəʔ swatixʷtəd gʷəl tasbəsad ʔal kʷi tuhaʔkʷ":
 `
-_this land: past.state.darkness in remote past.of.long.duration_
-
+- _tiʔəʔ swatixʷtəd_: and-fronted locational topicalized clause
+- _gʷəl_ sentential conjunction
+- _tu=?as-bəsad_ predicate
+- prepositional phrase:  Preposition + Modifier(s) + Noun, Pronoun, Gerund, or Clause
+    - _ʔal_: preposition of location (here, in time)
+    - _kʷi_: adjectival demonstrative
+    - _tuhaʔkʷ_: noun - past long ago
 `,
 
 "tu=":
@@ -1585,43 +1516,6 @@ _s√watixʷtəd_: land, country, world; place, region.  LD 245
     - grow dark (evening) LD 39
     - compare _ɬax̌_ (night, dark, darkness) LD 143
 `,
-
-"Root Semantics":
-`
-#### Root Semantics: from Davis and Matthewson: <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1749-818X.2009.00145.x">Issues in Salish Syntax and Semantics</a>
-
-Salish languages are of interest for the investigation of decompositional theories of verb meaning,
-since to a much greater extent than in European languages, Salish verbs wear their derivational
-structure on their sleeves. 
-
-footnote: We assume a three-way lexical category distinction between nouns, adjectives, and verbs,
-and focus here exclusively on the last. The issue of category neutrality in Salish has been the
-subject of intense debate, but the debate has largely now been settled in favor of recognizing at
-least a noun-verb distinction and probably an adjective-verb distinction as well.
-
-A Salish verb typically consists of the following elements (excluding inflectional morphemes such 
-as person marking, and passive, reciprocal and reflexive suffixes):
-
-  - a root (distinguishable as the domain of various morphophonological processes, including infixation 
-    and several types of reduplication).
-
- - some form of aspectual marking, which may be either prefixal (e.g., reflexes of the
-   pan-Salish stative prefix _ʔac-), infixal (e.g., the Interior Salish inchoative infix _-ʔ–),
-   suffixal (e.g., the Interior Salish inchoative suffix _–p_), reduplicative (e.g., Central
-   Salish ‘inceptive’ CV-reduplication) or a mixture of these (e.g., Central Salish ‘actual’
-   (imperfective) morphology).
-
- - zero or more lexical suffixes, substantive elements with root-like meanings which modify the
-   root in various ways, but do not generally affect valence, aspect, or argument structure.
-
- - a transitivizing or intransitive suffix; almost without exception throughout Salish, transitive
-   verbs (those which take object suffixes) must be suffixed with a transitivizer; intransitive
-   verbs fall into both suffixed and unsuffixed types. Transitivity is linked to both aspect and
-   agent control: the latter notion refers to the ability of an agent to influence the outcome of an
-   event (Thompson 1979, 1985).  Of these four basic ingredients, only the root is essential: every
-   Salish language has at least some ‘bare root’ verbs. However, bare root verbs are always in the
-   minority; the majority of verb roots for any given Salish language are obligatorily affixed with
-   one or more of the elements in (ii–iv) above to form a complex verb stem.  `,
 
 "Grammar Notes":
 `
@@ -1656,11 +1550,11 @@ obligatory and realized as subject and direct object, respectively. We call thes
 CUT without an instrument—we would use a different verb for that), so is called an "oblique object." In the 
 sentence I gave you, there is another entity, the longhouse, which is completely optional. We call that an “adjunct” 
 (mainly for historical reasons having to do with those strange trees you stumbled across). Adjuncts are typically 
-locations, times, motives, and other adverbial “extras”.  [i.e., they are structurally dispensable, is not an argument]
+locations, times, motives, and other adverbial “extras”.
 
 Once you have those terms, you can start to figure out (bit by bit) the pattern in relative clauses and gerunds:
 
-A relative clause—also called an adjective or adjectival clause—will meet three requirements.
+(A relative clause—also called an adjective or adjectival clause—will meet three requirements.
 
 First, it will contain a subject and verb.
 Next, it will begin with a relative pronoun [who, whom, whose, that, or which] or a relative adverb [when, where, or why].
@@ -1949,91 +1843,48 @@ patterns.
 3. [interrogative][adverbial.demonstrative][predicate][subject]
 `,
 
-"tudxʷadhadəxʷ tiʔəʔ ʔaciɬtalbixʷ.  gʷʔəsčaləxʷ kʷi gʷədəxʷkʷədxʷ čəɬ kʷi sləx̌il.":
+"tudxʷadhadəxʷ tiʔəʔ ʔaciɬtalbixʷ.  ʔəsčaləxʷ kʷi gʷədəxʷkʷədxʷ čəɬ kʷi sləx̌il.":
 `
-past.talk-talk.now this people.  SBJ.how?now remote SBJ.means.take/get.difficult us remote daylight
-
-<audio id="line3-halfSpeed"><source src="audio/line3-halfSpeed.wav"/></audio><button onclick="playSample('line3-halfSpeed')">half-speed</button>
-
-first SBJ is my interpolation from the audio.
+1. [predicate] [subject [pronomial.demonstrative subject]]
+2. [interrogative] [adjectival.demonstrative verb] [subject] [adj.dem object]
+   - _ʔəsčaləxʷ kʷi_: [predicate][object (adj.dem)(clause)]
+       - clause: _gʷədəxʷkʷədxʷ čəɬ kʷi sləx̌il_: [predicate][subject][object (adj.dem)(object)]
 
 `,
 
-"‘In the distant past, there was no daylight.’":
+"ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il.":
 `
-- temporal prepositional phrase: in the distant past
+- _ʔal kʷi tuhaʔkʷ_ : fronted temporal prepositional phrase (adjunct)
+- _gʷəl_: sentential conjunction
+- _xʷi_: predicate
+- _gʷətusləx̌il_: subject - (predicate argument)
 
-- syntactic expletive: "there" in e.g. "there was" - a pronoun that is used at the start of a
-  sentence or clause when the referent is not immediately known, but an argument for the verb is
-  syntactically required. The basic meaning of the clause is made explicit after the verb. Common
-  forms of construction for sentences that contain a syntactic expletive begin with "it is", "here
-  is", or "there is". The expletive serves as the grammatical subject of the independent clause that
-  it begins. In a clause like "it is raining" the referent of the pronoun "it" is not obvious.
+David comments:
 
-- sometimes called "dummy pronoun": a deictic pronoun that fulfills a syntactical requirement
-  without providing a contextually explicit meaning of its referent. As such, it is an example of
-  exophora [something not in the original text or discourse].
+That looks okay, but I think I would not say that gʷətusləx̌il is the subject of the negative
+predicate xʷiʔ. The structure isn’t clear syntactically, but if it were a subject, you would expect
+there to be some sort of determiner (article) introducing it. In the grammar sketch, I decided that
+it is more likely to be a complement of xʷiʔ (like “doctor” in “be a doctor” is the complement of
+“be”). That makes gʷətusləx̌il part of the Comment portion of the sentence (what is being asserted),
+whereas a subject would have to be a Topic (what is being talked about), and my take on the sentence
+is that the assertion is that “there was no daylight long ago”—that is, this sentence really has no
+Topic, the whole thing is an assertion.
 
-- *no*: a determiner expressing quantity (all, every, many, some, any, each, either, one, another)
-  similar in meaning to "not a" or "not any"
+That’s niggling technical detail, but it might help you by reinforcing the rule that subjects always
+have a determiner in front of them.
 
-- see "weather it"
-
-- david beck, analyzing line 12:
-    sləx̌il is what we call in the business an impersonal verb which doesn’t have any real Agent or
-  Actor to be the subject, so the subject of any clause with sləx̌il is like the English “it” in “it
-  is raining”—an “empty” (i.e., meaningless) third-person. When you nominalize a verb in
-  Lushootseed, you need to express what would have been the subject as a possessor, so here the =s
-  is just a grammatical expression of that empty third person.  The subject of the second sentence
-  is also that, but since it is not nominalized, we have a finite clause with a Ø (elided) pronoun.
-
-  - LINGREF(line1.english, diagram)
-
-- reminiscent of Genesis 1:3 'And God said, Let there be light; and there was light.'
-`,
-
-"ʔal kʷi tu, ʔal kʷi tuhaʔkʷ gʷəl xʷiʔ gʷətusləx̌il":
-`
-_in remote past, in remote past.of.long.duration: there was no remote.past coming.of.light_
-- topicalization LINGREF(And-fronting, And-fronting)
-- english: In the distant past, there was no daylight.
-   - in the distant past: temporal prepositional phrase
-        - preposition: in
-        - object: past 
-   - no daylight | there was
-   - a linking verb is a verb that describes the subject by connecting it to a predicate adjective 
-     or predicate noun (collectively known as subject complements). Unlike the majority of verbs, 
-     they do not describe any direct action taken or controlled by the subject.
-   - Linking verbs include copulas such as the English verb be and its various forms, as well as verbs
-     of perception such as look, sound, or taste and some other verbs that describe the subject, such 
-     as seem, become, or remain.
-   - LINGREF(COPULA, copula) -  stative verbs. a word or phrase that links the subject of a phrase to a complement (which 
-     describes or renames the subject).
-   - The word *there* is used as a pronoun in some sentences, playing the role of a dummy subject,
-     normally of an intransitive verb. The "logical subject" of the verb then appears as a
-     complement after the verb.
-   - **dummy subject**:  _There are five Dutch people in our village_. (The real subject is the Dutch
-      people – they are in the village.)
-   - This use of *there* occurs most commonly with forms of the verb be in existential clauses, to refer
-     to the presence or existence of something. For example: There is a heaven; There are two cups on
-     the table; There have been a lot of problems lately. It can also be used with other verbs: There
-     exist two major variants; There occurred a very strange incident.
-   - The dummy subject takes the number (singular or plural) of the logical subject (complement),
-     hence it takes a plural verb if the complement is plural. In informal English, however, the
-     contraction there's is often used for both singular and plural.[14]
-   - The dummy subject can undergo inversion, Is there a test today?  and Never has there been a man
-     such as this. It can also appear without a corresponding logical subject, in short sentences
-     and question tags: There wasn't a discussion, was there? There was.
-   - The word there in such sentences has sometimes been analyzed as an adverb, or as a dummy
-     predicate, rather than as a pronoun.[15] However, its identification as a pronoun is most
-     consistent with its behavior in inverted sentences and question tags as described above.
 
 `,
 
 "gʷə=tu=s–ləx̌–il":
 `
 _imagined, conjectured, could-it-have-been? long-ago day (coming of light)_
-  - GWE
+  - gʷ-
+    - if, maybe, might
+    - inflectional subjunctive prefix expressing doubt, events contrary to fact
+    - appears on any lexical category functioning as predicate or complement
+    - _gʷə_ before consonants
+    - LD 95
   - _tu_
      - past time, especially the remote past
      - inflectional past prefix, appearing on any lexical category functioning as predicate or complement
@@ -2054,7 +1905,10 @@ _imagined, conjectured, could-it-have-been? long-ago day (coming of light)_
       base for this form is shown by the relative ordering of the affixes — lexical suffixes are
       attached directly to the stem, followed by other derivational affixes, including the
       inchoative (cf., the form cəbagʷiɬil [cəb ‘two’ + -agʷiɬ ‘canoe’ + -il ‘inchoative’]. Beck 134
-     `,
+    - INCH, inchoative: an inchoative verb, sometimes called an "inceptive" verb, shows a process of 
+      beginning or becoming.
+`,
+
 "tu=haʔkʷ":
 `
 _long ago past_
@@ -2102,8 +1956,7 @@ _long ago past_
 _remote_
 - a, any (hypothetical, doubtful). see _tiʔiɬ_.  LD 125
 - adjectival demonstrative referring to hypothetical and/or remote entities.
-- (adjectival demonstratives modify nouns so that we know which specific person, place, or thing is mentioned,
-   thus demonstrating the distance between the noun being modified and the speaker of the sentence.)
+- (adjectival demonstratives modify nouns so that we know which specific person, place, or thing is mentioned.)
 - see LR1.p77 for discusson of pronomial, adjectival and adverbial demonstratives.
 `,
 
@@ -2230,9 +2083,7 @@ _remote_
 
 "gʷəl":
 `
-**gʷəl**
-
-- and, but, or, then, next. LD 100.
+- and, but, or, then, next 
 - as if 
 - because 
 - sentential adverb, conjunction; used especially to introduce sentences in long narratives.
@@ -2243,7 +2094,7 @@ _remote_
     
 "tu=lə=č’it–il":
 `
-_approached, were coming near, getting close_
+_approached, were coming near_
 - past
 - _lə_: action is ongoing, non-circumscribed, continuing, developing. LD 134. PROG (progressive)
 - _č’it_: near, close.  LD 73.
@@ -2257,10 +2108,8 @@ _approached, were coming near, getting close_
 
 "x̌ʷul’=əxʷ":
 `
-_just now_  (or maybe _near now_)
-- _x̌ʷul’_: only, merely, simply, just, just that and nothing else, predicate adverb. LD 273.
-- _x̌ʷul(u)_:  place near someone or something.  Compare _č’it_.
-     - _ləx̌ʷuləxʷ čəɬ_ We are getting near.
+_just now_
+- _x̌ʷul’_: only, merely, simply, just, just that and nothing else, predicate adverb. LD 73.
 - _-axʷ_: now, at the particular time. LD 30
 `,
     
@@ -2374,31 +2223,35 @@ lexical category functioning as predicate or complement.
 "tiʔəʔ":
 `
 _this_
-  - unmarked pronomial demonstrative  (maybe actually adnomial?)
-  - Demonstratives are commonly divided into pronominal demonstratives, which substitute for a noun (phrase),
-    and adnominal demonstratives, which accompany a coreferential noun. In English, pronominal and adnominal
-    demonstratives have the same forms: this  and that  may function as independent pronouns ("take _that_"),
-    or  may cooccur with a noun ("_that_ book").
+  - unmarked pronomial demonstrative
   - feminine: tsiʔəʔ
   - in many cases _the_, _a_ or no word at all is more suitable in English translation.
 `,
 
 "ti":
 `
-- this particular one:  an adjectival LINGREF(demonstrative, demonstrative) LINGREF(determiner, determiner) of unique reference  LD 224.  feminime tsi
+- this particular one:  adjectival demonstrative of unique reference  LD 224, feminime tsi
 - can be proximal adjectival or pronomial demonstrative
 - tiʔiɬ: that, adjectival or pronomial, femimine tsiʔiɬ
 - tiʔəʔ: this SL: ti
 - tsiʔəʔ: feminine
 - kʷi: hyptothetical or remote adjectival demonstrative
 - *demonstratives* are words, such as this and that, used to indicate which entities are being
-  referred to and to distinguish those entities from others. They are typically LINGREF(deixis, deictic) - their
+  referred to and to distinguish those entities from others. They are typically deictic; their
   meaning depending on a particular frame of reference and cannot be understood without
   context. Demonstratives are often used in spatial deixis (where the speaker or sometimes the
   listener are to provide context), but also in intra-discourse reference (including abstract
-  concepts) or LINGREF(anaphor, anaphora) where the meaning is dependent on something other than the relative
+  concepts) or anaphora, where the meaning is dependent on something other than the relative
   physical location of the speaker, for example whether something is currently being said or was
   said earlier.
+- *deixis* refers to words and phrases, such as "me" or "here", that cannot be fully understood
+   without additional contextual information—in this case, the identity of the speaker ("me") and
+   the speaker's location ("here"). Words are deictic if their semantic meaning is fixed but their
+   denoted meaning varies depending on time and/or place. Words or phrases that require contextual
+   information to convey any meaning—for example, English pronouns—are deictic. Deixis is closely
+   related to anaphora
+- *anaphora* (cataphora, endophora) is the use of an expression whose interpretation depends upon
+   another expression in context (its antecedent or postcedent): _Sally arrived, but nobody saw her._
 `,
     
 //------------------------------------------------------------------------------------------------------------------------
@@ -2672,7 +2525,7 @@ explanations:
      - A suffix occuring on several levels of Lushootseed morphology.
        It forms a very large class of agent-oriented intransitive verb
        stems and a number of ambient stems such as *qəl-b* 'rain'.
-     - With lexical stems it designates middle voice and in construction
+     - With lexial stems it designates middle voice and in construction
        with *dxʷ(s)-* and *ʔəʷ(s)* it creates a desiderative stem.
      - This *-b* is a component in a number of derivational suffixes
        as well, and combines with transitive suffixes to form a passive
