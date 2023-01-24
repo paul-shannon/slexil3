@@ -8,4 +8,6 @@ kb:
 publish:
 	scp * paulshannnon@pshannon.net:public_html/pshannon.net/slexil2/
 
+view:
+	open   https://pshannon.net/slexil2/
 

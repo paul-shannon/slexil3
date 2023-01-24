@@ -38,7 +38,7 @@
      border-radius: 10px;
      }
   div.currentLine{
-      border: 4px solid darkgray;
+      border: 4px solid lightgray;
       border-radius: 10px;
       }
 
@@ -54,6 +54,9 @@
      border-radius: 10px;
      height: 300px;
      overflow-y: auto;
+     overflow-x: visible;
+     //inline-size: 600px;
+     //overflow-wrap: anywhere;
      display: none;
      }
 
@@ -78,7 +81,6 @@
             <li><a class="dropdown-item" onclick="normalSpeed()">Normal</a></li>
           </ul>
         </div>
-      <button class="btn btn-outline-primary" onclick='annoEditor()'>Edit</button>
       </div>
 
       <div class="card">
@@ -304,21 +306,21 @@
     window.wavesurfer = wavesurfer;
 
 
-   $(".grammatical-term, .lushootseed-morpheme, .speech-tier")
-        .mouseenter(function(e){
-           $(this).addClass("highlight");
-           var key = this.innerHTML
-           console.log("  mouseenter: " + key)
-           if(tierVisibility["annotations"]){
-              var htmlText = "<button class='btn btn-outline-primary'>Edit</button> &nbsp; &nbsp;";
-              htmlText += "<b>" + key + "</b><p>";
-              htmlText += lookup(key);
-              $("div.row.spokenLine.currentLine > div.line-content > div.annotationBox").html(htmlText);
-              }
-           })
-        .mouseleave(function(e){
-           $(this).removeClass("highlight");
-        });
+   $(".currentLine").find(".grammatical-term, .lushootseed-morpheme, .speech-tier")
+      .mouseenter(function(e){
+         $(this).addClass("highlight");
+         var key = this.innerHTML
+         console.log("  mouseenter: " + key)
+         if(tierVisibility["annotations"]){
+            var htmlText = "<button class='btn btn-outline-primary'>Edit</button> &nbsp; &nbsp;";
+            htmlText += "<b>" + key + "</b><p>";
+            htmlText += lookup(key);
+            $("div.row.spokenLine.currentLine > div.line-content > div.annotationBox").html(htmlText);
+            }
+         })
+      .mouseleave(function(e){
+         $(this).removeClass("highlight");
+         });
 
 
     $("div.row.spokenLine").on("click", function(e){
