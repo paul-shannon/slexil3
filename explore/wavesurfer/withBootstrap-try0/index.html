@@ -314,6 +314,7 @@
        var rowID = $(this).attr("id");
        rowDivs.each(function(index){$(this).removeClass("currentLine");})
        $(this).addClass("currentLine")
+       installCurrentLineHandlers()
        if(Object.keys(divSounds).indexOf(rowID) >= 0){
           var url = "http://localhost:8001/" + divSounds[rowID]
           wavesurfer.load(divSounds[rowID]);
@@ -321,13 +322,13 @@
        if(tierVisibility["annotations"]) {
           $("div.row.spokenLine > div.line-content > div.annotationBox").hide();
           $("div.row.spokenLine.currentLine > div.line-content > div.annotationBox").show();
-           installCurrentLineHandlers()
           }
         });
 
   });  // document ready
   //-------------------------------------------------------------------------
   function installCurrentLineHandlers(){
+    $(".grammatical-term, .lushootseed-morpheme, .speech-tier").unbind("mouseenter mouseleave")
     $(".currentLine").find(".grammatical-term, .lushootseed-morpheme, .speech-tier")
       .mouseenter(function(e){
          $(this).addClass("highlight");
