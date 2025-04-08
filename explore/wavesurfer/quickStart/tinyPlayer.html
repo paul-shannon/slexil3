@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tinyPlayer</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+</head>
+<body>
+  <div id="main">
+     <div id="waveform"
+          style="margin: 100px; border: 1px solid black; border-radius:10px;">
+     </div>
+   <button id="playButton">PLAY</button>
+   <button id="pauseButton">PAUSE</button>
+    
+   </div>
+
+<script type="module">
+
+  import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+  const wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#4F4A85',
+    progressColor: '#383351',
+    url: 'http://localhost:9999/a1.wav',
+    })
+
+  $("#playButton").on("click", function(){wavesurfer.play()})
+  $("#pauseButton").on("click", function(){wavesurfer.pause()})
+
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tinyRecorder</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+</head>
+<body>
+  <div id="main">
+     <h1 style="margin-top: 0">Press Record to start recording</h1>
+      <p>
+      📖 <a href="https://wavesurfer.xyz/docs/classes/plugins_record.RecordPlugin">Record plugin docs</a>
+     </p>
+     <div id="waveform"
+           style="margin: 100px; border: 1px solid black; border-radius:10px;"></d>
+  <button id="recordButton">Record</button>
+  <button id="pauseButton" style="display: none;">Pause</button>
+  <select id="mic-select">
+    <option value="" hidden>Select mic</option>
+  </select>
+  <label><input type="checkbox" id="scrollingWaveform" /> Scrolling waveform</label>
+  <label><input type="checkbox" id="continuousWaveform" checked="checked" /> Continuous waveform</label>
+  <p id="progress">00:00</p>
+  <div id="mic" style="border: 1px solid #ddd; border-radius: 4px; margin-top: 1rem"></div>
+
+  
+   </div>
+
+<script type="module">
+
+  import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+  import RecordPlugin from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/record.esm.js'
+
+  let recorder, wavesurfer
+  let scrollingWaveform = false
+  let continuousWaveform = true
+
+//--------------------------------------------------------------------------------
+const createWaveSurfer = function() {
+  if (wavesurfer){
+    wavesurfer.destroy()
+    }
+  wavesurfer = WaveSurfer.create({
+     container: '#mic',
+     waveColor: 'rgb(200, 0, 200)',
+     progressColor: 'rgb(100, 0, 100)',
+     })
+
+    recorder = wavesurfer.registerPlugin(
+      RecordPlugin.create({
+        renderRecordedAudio: false,
+        scrollingWaveform,
+        continuousWaveform,
+        continuousWaveformDuration: 30, // optional
+        }),
+      ) // recorder
+
+} // createWaveSurfer
+//--------------------------------------------------------------------------------
+  const micSelector = document.querySelector('#mic-select')
+  
+  RecordPlugin.getAvailableAudioDevices().then((devices) => {
+    devices.forEach((device) => {
+      const option = document.createElement('option')
+      option.value = device.deviceId
+      option.text = device.label || device.deviceId
+      micSelector.appendChild(option)
+    })
+  })
+
+
+$("#recordButton").on("click", function(){
+  console.log("--- recordButton clicked")
+  let recordButton = this;
+  if(recorder.isRecording() || recorder.isPaused()) {
+    recorder.stopRecording()
+    }
+   })
+
+//  recButton.disabled = true
+
+  // reset the wavesurfer instance
+
+  // get selected device
+  const deviceId = micSelector.value
+//  record.startRecording({ deviceId }).then(() => {
+//    recButton.textContent = 'Stop'
+//    recButton.disabled = false
+//    pauseButton.style.display = 'inline'
+//  })
+//}
+
+
+  createWaveSurfer()
+      
+  $("#playButton").on("click", function(){wavesurfer.play()})
+  $("#pauseButton").on("click", function(){wavesurfer.pause()})
+
+</script>
+</body>
+</html>

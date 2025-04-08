@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>official recorder demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+  <link rel="shortcut icon" href="#" />
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+
+  <style>
+    button {
+      min-width: 5rem;
+      margin: 1rem 1rem 1rem 0;
+      }
+    .waveformDiv{
+      border: 1px solid black;
+      border-radius: 10px;
+      margin-top: 50px;
+      }
+  </style>
+
+</head>
+
+<body>
+
+  <h1 style="margin-top: 0">Press Record to start recording</h1>
+  <button id="recordButton">Record</button>
+  <button id="pause">Pause</button>
+  <button id="playbackButton">Play</button>
+  <select id="mic-select">
+    <option value="" hidden>Select mic</option>
+  </select>
+  <p id="progressReadout">00:00</p>
+  <div id="recorderDiv" class="waveformDiv"></div>
+  <div id="playbackDiv" class="waveformDiv" style="display: none"></div>
+
+<!-------------------------------------------------------------------------------->
+<script type="module">
+
+import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+import RecordPlugin from 'https://unpkg.com/wavesurfer.js/dist/plugins/record.esm.js'
+
+let wavesurfer, recorder;
+let scrollingWaveform = false
+let continuousWaveform = true
+//--------------------------------------------------------------------------------
+
+$(document).ready(function(){
+   console.log("--- document ready")
+   })
+
+
+const createWaveSurfer = () => {
+
+  if(wavesurfer){wavesurfer.destroy()}
+
+  wavesurfer = WaveSurfer.create({
+    container: '#recorderDiv',
+    waveColor: 'rgb(200, 0, 200)',
+    progressColor: 'rgb(100, 0, 100)',
+    })
+  window.wavesurfer = wavesurfer;
+
+
+  recorder = wavesurfer.registerPlugin(
+    RecordPlugin.create({
+      renderRecordedAudio: true,
+      scrollingWaveform,
+      continuousWaveform,
+      continuousWaveformDuration: 60, // optional
+      })) // registerPlugin
+
+  recorder.on('record-end', (blob) => {
+     const container = document.querySelector('#playbackDiv')
+     $("#recorderDiv").hide()
+     const recordedUrl = URL.createObjectURL(blob)
+     wavesurfer = WaveSurfer.create({
+       container,
+       waveColor: 'rgb(200, 100, 0)',
+       progressColor: 'rgb(100, 50, 0)',
+       url: recordedUrl,
+       })
+      window.wavesurfer = wavesurfer;
+      $('#playbackDiv').show()
+      $("#playbackButton").show()
+      $("#playbackButton").on("click", function(){wavesurfer.playPause()})
+     //const button = container.appendChild(document.createElement('button'))
+     //button.textContent = 'Play'
+     //button.onclick = function(){wavesurfer.playPause()}
+     //wavesurfer.on('pause', () => (button.textContent = 'Play'))
+     //wavesurfer.on('play', () => (button.textContent = 'Pause'))
+     }) // on end
+
+  pauseButton.style.display = 'none'
+  recordButton.textContent = 'Record'
+
+  recorder.on('record-progress', (time) => {
+    updateProgress(time)
+    })
+
+} // createWaveSurfer
+//--------------------------------------------------------------------------------
+const progressReadout = document.querySelector('#progressReadout')
+function updateProgress(time){
+  const formattedTime = [// time will be in milliseconds, convert it to mm:ss format
+    Math.floor((time % 3600000) / 60000), // minutes
+    Math.floor((time % 60000) / 1000), // seconds
+    ].map((v) => (v < 10 ? '0' + v : v)).join(':')
+  progressReadout.textContent = formattedTime
+  } 
+
+const pauseButton = document.querySelector('#pause')
+pauseButton.onclick = () => {
+  if (recorder.isPaused()) {
+    recorder.resumeRecording()
+    pauseButton.textContent = 'Pause'
+    return
+    }
+  recorder.pauseRecording()
+  pauseButton.textContent = 'Resume'
+  } // pause
+
+const micSelect = document.querySelector('#mic-select')
+
+//{
+RecordPlugin.getAvailableAudioDevices().then((devices) => {
+   devices.forEach((device) => {
+      const option = document.createElement('option')
+      option.value = device.deviceId
+      option.text = device.label || device.deviceId
+      micSelect.appendChild(option)
+      })
+   })
+//}
+
+const recordButton = document.querySelector('#recordButton')
+
+recordButton.onclick = function(){
+  if(recorder.isRecording() || recorder.isPaused()){
+     recorder.stopRecording()
+     recordButton.textContent = 'Record'
+     pauseButton.style.display = 'none'
+     return
+     }
+
+  recordButton.disabled = true
+  const deviceId = micSelect.value
+  recorder.startRecording({ deviceId }).then(() => {
+     recordButton.textContent = 'Stop'
+     recordButton.disabled = false
+     pauseButton.style.display = 'inline'
+    })
+} // onclick
+
+createWaveSurfer()
+
+</script>
+</body>
+</html>

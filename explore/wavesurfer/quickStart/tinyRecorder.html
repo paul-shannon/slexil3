@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tinyRecorder</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+  <link rel="shortcut icon" href="#" />
+</head>
+<body>
+  <div id="main">
+     <div id="waveform"
+          style="margin: 100px; border: 1px solid black; border-radius:10px;">
+     </div>
+   <button id="playButton">PLAY</button>
+   <button id="pauseButton">PAUSE</button>
+   <button id="startRecordingButton">Start Recording</button>
+   <button id="pauseRecordingButton">Pause Recording</button>
+    
+   </div>
+
+<script type="module">
+
+  import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+  import RecordPlugin from 'https://unpkg.com/wavesurfer.js/dist/plugins/record.esm.js'
+  var recorder, wavesurfer;
+  window.RecordPluging = RecordPlugin;
+
+$(document).ready(function(){
+   console.log("--- document ready")
+
+   wavesurfer = WaveSurfer.create({
+     container: '#waveform',
+     waveColor: '#4F4A85',
+     progressColor: '#383351',
+     url: 'http://localhost:9999/a1.wav',
+     })
+
+  recorder = wavesurfer.registerPlugin(
+    RecordPlugin.create({
+      renderRecordedAudio: true,
+        scrollingWaveform: false,
+        continuousWaveform: true,
+      continuousWaveformDuration: 30, // optional
+    }),
+  )
+    window.recorder = recorder;
+     }) // document ready
+
+  $("#playButton").on("click", function(){wavesurfer.play()})
+  $("#pauseButton").on("click", function(){wavesurfer.pause()})
+
+  RecordPlugin.getAvailableAudioDevices().then((devices) => {
+      console.log("device promise fulfilled");
+      devices.forEach((device) => {
+          console.log(device.deviceId)
+      })})
+
+
+  $("#startRecordingButton").on("click", function(){
+      console.log("start recording")
+     })
+
+  $("#pauseRecordingButton").on("click", function(){
+      console.log("pause recording")
+     })
+
+</script>
+</body>
+</html>
+
+
