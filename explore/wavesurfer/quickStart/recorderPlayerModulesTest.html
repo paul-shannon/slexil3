@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>tinyRecorder</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+  <link rel="shortcut icon" href="#" />
+</head>
+<body>
+  <div id="main" style="margin: 100px;">
+     <div id="recorderDiv"
+          style="border: 1px solid black; border-radius:10px;">
+     </div>
+   <button id="recordButton">Record</button>
+    <div id="playerDiv"
+         style="border: 1px solid black; border-radius:10px;">
+    </div>
+   <button id="playerButton">Play</button>
+
+   </div>
+
+<script type="module">
+
+import createRecorder from 'http://localhost:9999/recorderModule.js';
+import createPlayer from 'http://localhost:9999/playerModule.js';
+
+function recordingEndHandler(recordedUrl){
+   console.log(" recording ended, seen by recorderModuleTest.html")
+   console.log("url: " + recordedUrl)
+    let player = createPlayer(recordedUrl, "#playerDiv", "#playerButton")
+   }
+
+$(document).ready(function(){
+   console.log("--- document ready")
+    let recorder = createRecorder("#recorderDiv", "#recordButton", recordingEndHandler);   
+
+  }) // document ready
+
+//--------------------------------------------------------------------------------
+</script>
+</body>
+</html>
+
+

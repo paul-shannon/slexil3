@@ -12,19 +12,6 @@
       min-width: 5rem;
       margin: 1rem 1rem 1rem 0;
       }
-    #recorderDiv{
-      border: 3px dotted darkblue;
-      border-radius: 10px;
-      margin-top: 50px;
-      width: 50%;
-      }
-    #playbackDiv{
-      border: 1px solid red;
-      border-radius: 10px;
-      margin-top: 50px;
-      width: 50%;
-      }
-
     .waveformDiv{
       border: 1px solid black;
       border-radius: 10px;
@@ -94,10 +81,10 @@ function createRecorder()
           microphoneSelector.appendChild(option)
        })})
     
-  //recorder.on('record-end', (blob) => {
-  //   console.log("recording ended")
-  //   createPlayback()
-  //   }) // on end
+  recorder.on('record-end', (blob) => {
+     console.log("recording ended")
+     createPlayback()
+     }) // on end
 
   
   return(recorder);
@@ -116,9 +103,11 @@ function getMicrophoneDevices()
 
 }  // getMicrophoneDevices
 //--------------------------------------------------------------------------------
-$("#playBackButton").on("click", function() {
+function createPlayback(recordedUrl)
+{
+    console.log("createPlayback")
 
-   }) // click playBackButton
+} // createPlayback
 //--------------------------------------------------------------------------------
 $("#recordButton").on("click", function() {
 
@@ -133,20 +122,14 @@ $("#recordButton").on("click", function() {
        }
     else{
        globalThis.recorder.stopRecording()
+       globalThis.recorder.stopRecording()
        $("#recordButton").text("Record")
        }
     
   globalThis.recorder.on("record-end", (blob) => {
      console.log("recording now ended")
      const recordedUrl = URL.createObjectURL(blob)
-     $("#recorderDiv").hide();
-     $("#playbackDiv").show()
-     const wavesurfer = WaveSurfer.create({
-        container: '#playbackDiv',
-        waveColor: 'rgb(200, 100, 0)',
-        progressColor: 'rgb(100, 50, 0)',
-        url: recordedUrl
-        })
+     console.log(" next up: hide recorder, create and display playback")
      })
 
 
